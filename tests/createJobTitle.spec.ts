@@ -22,7 +22,7 @@ test("Document Template creation", async ({ page }) => {
   await page.getByPlaceholder('Enter Job Title').fill('Test Job Title ');
   await page.getByRole('button', { name: 'Save' }).click();
 
-//close
+//close browser
   await context.close();
   await browser.close();
 });
