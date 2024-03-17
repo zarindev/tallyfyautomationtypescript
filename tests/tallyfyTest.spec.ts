@@ -100,3 +100,4 @@ test("Job Title Creation", async ({ page }) => {
   await page.getByPlaceholder("Enter Job Title").fill("Test Job Title ");
   await page.getByRole("button", { name: "Save" }).click();
 });
+
