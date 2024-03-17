@@ -1,8 +1,7 @@
 import { test, expect, chromium } from "@playwright/test";
 
-test("Sign In", async ({ page }) => {
-  const browser = await chromium.launch();
-  const context = await browser.newContext();
+test("Login Setup", async({page}) => {
+
   await page.goto("https://account.tallyfy.com/login");
 
   await page.fill('input[type="email"]', "mdzarinjerry@gmail.com");
@@ -11,6 +10,10 @@ test("Sign In", async ({ page }) => {
 
   await page.click('button[type="submit"]');
 
-  await context.close();
-  await browser.close();
-});
+  await page.waitForURL("https://go.tallyfy.com/9710244f43f053c2618dd09613e3c56d/dashboard");
+
+  await expect(page).toHaveTitle(/Tallyfy/);
+
+  await page.context().storageState({path: "./playwright/.auth/auth.json"})
+
+})
