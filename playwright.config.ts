@@ -33,6 +33,10 @@ export default defineConfig({
     trace: "on",
     headless: false,
     //storageState: "./playwright/.auth/auth.json"
+    launchOptions: {
+      slowMo: 1200,
+    }
+
   },
 
   timeout: 10*30000,
