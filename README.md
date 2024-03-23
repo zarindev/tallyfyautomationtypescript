@@ -11,7 +11,7 @@ Run this on your desktop terminal in a specific folder where you want this test 
 - All the packages will be installed and you will be ready to run the test now
 
 ## Running Tests
-The `tests` folder contains the test files. The files with `.spec.ts` are the test files containing tests written inside them. 
+The `tests` folder contains the test files. The files with `.spec.ts` extension are the test files containing tests written inside them. 
 
 You can run all the tests together by running `npx playwright test` in the `VS Code Terminal`. By doing this, all the tests will run together simultaneously. 
 
