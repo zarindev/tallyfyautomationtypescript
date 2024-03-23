@@ -18,14 +18,11 @@ You can run all the tests together by running `npx playwright test` in the `VS C
 You can run specific test file tests by including the file name in the command. For example, you want to run `tallyfyTest.spec.ts` file for a test. Run `npx playwright test tallyfyTest.spec.ts` in the `VS Code Terminal`.
 
 By the above methods, the tests will be run in chromium, firefox, and webkit browsers at the same time. But you can choose a specific browser to run a test. 
+
 Run `npx playwright test --project=chromium` to run the tests in chromium browser.
 Run `npx playwright test --project=firefox` to run the tests in firefox browser.
 Run `npx playwright test --project=webkit` to run the tests in webkit browser.
 
 If you want to run a specific test file in a specific browser, run `npx playwright test tallyfyTest.spec.ts --project=chromium`.
 
-
-
-
-
-
+By installing `Playwright Test for VSCode` extension you can run a specific test from a test file with a single click. 
