@@ -108,4 +108,6 @@ test("Create a Task From Tasks Page", async ({page}) => {
   await page.getByRole("link", { name: "Tasks"}).click();
   await page.getByPlaceholder("Type in the task").fill("Test Task");
   await page.getByRole("button", { name: "ADD TASK"}).click();
+  await page.getByRole("button", { name: "SAVE"}).click();
+  
 })
