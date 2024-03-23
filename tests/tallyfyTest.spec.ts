@@ -100,3 +100,12 @@ test("Job Title Creation", async ({ page }) => {
   await page.getByRole('row', { name: 'Test Job Title Edit Delete', exact: true }).getByRole('button').nth(1).click();
   
 });
+
+test("Create a Task From Tasks Page", async ({page}) => {
+  await page.goto(
+    "https://go.tallyfy.com/9710244f43f053c2618dd09613e3c56d/dashboard"
+  );
+  await page.getByRole("link", { name: "Tasks"}).click();
+  await page.getByPlaceholder("Type in the task").fill("Test Task");
+  await page.getByRole("button", { name: "ADD TASK"}).click();
+})
